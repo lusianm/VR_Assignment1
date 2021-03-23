@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(transform.right.normalized * moveHorizonal);
         rb.AddForce(transform.up.normalized * moveJump);
         //rb.AddForce(movement);
+        //rb.velocity = transform.forward.normalized * moveVertical + transform.right.normalized * moveHorizonal + transform.up.normalized * moveJump;
         if (transform.position.y >= Yaxis)
         {
             moveJump = 0.0f;                // 중력 가속도 적용(기본적으로 물체 RigidBody에서 중력 적용되어 있음)
