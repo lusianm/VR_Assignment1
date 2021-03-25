@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject btn;
     public float moveHorizonal;
     public float moveVertical;
     public float moveJump;

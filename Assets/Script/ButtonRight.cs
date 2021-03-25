@@ -10,7 +10,6 @@ public class ButtonRight : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerDown(PointerEventData eventData)       // 눌리고 있을 때
     {
         player.GetComponent<PlayerController>().moveHorizonal = 1;
-
     }
 
     public void OnPointerUp(PointerEventData eventData)
