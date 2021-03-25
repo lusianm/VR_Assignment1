@@ -26,6 +26,6 @@ public class CameraMove : MonoBehaviour
         playerTransform.forward = playerForward;
         //가속도 센서의 정확도가 너무 약하다.
         //cameraParent.position = transform.position - gyro.userAcceleration * Time.deltaTime*50f + new Vector3(0, Time.deltaTime/10,0);
-        Debug.Log(Time.deltaTime);
+        //Debug.Log(Time.deltaTime);
     }
 }
