@@ -24,6 +24,14 @@ public class CameraMove : MonoBehaviour
         Vector3 playerForward = transform.forward;
         playerForward.y = 0;
         playerTransform.forward = playerForward;
+
+        if (transform.right.y < -0.35f)
+            Debug.Log("To Right");
+        else if (transform.right.y > 0.35f)
+            Debug.Log("To Left");
+        //Vector3 CameraToPlayer = playerTransform.position - transform.position.normalized;
+
+
         //가속도 센서의 정확도가 너무 약하다.
         //cameraParent.position = transform.position - gyro.userAcceleration * Time.deltaTime*50f + new Vector3(0, Time.deltaTime/10,0);
         //Debug.Log(Time.deltaTime);
