@@ -22,11 +22,11 @@ public class ObstacleMove : MonoBehaviour
             case 0:
                 return;
             case 1:
-                if (!Physics.Raycast(objectRightPosition, transform.right, 0.1f, 1 << LayerMask.NameToLayer("Obstacle")))
+                if (!Physics.Raycast(transform.position, transform.right, 0.5f * transform.lossyScale.x, 1 << LayerMask.NameToLayer("Obstacle")))
                     transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.right.normalized, moveSpeed);
                 break;
             case 2:
-                if (!Physics.Raycast(objectLeftPosition, -transform.right, 0.1f, 1 << LayerMask.NameToLayer("Obstacle")))
+                if (!Physics.Raycast(transform.position, -transform.right, 0.5f * transform.lossyScale.x, 1 << LayerMask.NameToLayer("Obstacle")))
                     transform.position = Vector3.MoveTowards(transform.position, transform.position - transform.right.normalized, moveSpeed);
                 break;
         }
