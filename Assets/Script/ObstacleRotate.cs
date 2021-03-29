@@ -13,9 +13,9 @@ public class ObstacleRotate : MonoBehaviour
 
     private void Start()
     {
-        rotationRightBound = (360 + transform.rotation.eulerAngles.x + rotationRightBound) % 360;
+        rotationRightBound = (360 + rotationRightBound) % 360;
         rightRotation = Quaternion.Euler(new Vector3(rotationRightBound, transform.eulerAngles.y, transform.eulerAngles.z));
-        rotationLeftBound = (360 + transform.rotation.eulerAngles.x + rotationLeftBound) % 360;
+        rotationLeftBound = (360 + rotationLeftBound) % 360;
         leftRotation = Quaternion.Euler(new Vector3(rotationLeftBound, transform.eulerAngles.y, transform.eulerAngles.z));
     }
 
